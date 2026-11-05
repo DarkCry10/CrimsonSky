@@ -1,0 +1,471 @@
+/* ==========================================================================
+   CRIMSON SKY — DARKCRY 1.0 (CSS GRID CON DEGRADADO TÉRMICO CONTINUO)
+   ========================================================================== */
+
+:root {
+  --color-parchment: #f6efe6;
+  --color-parchment-dark: #e8dcd0;
+  --color-crimson: #a61c1c;
+  --color-crimson-dark: #660d16;
+  --color-gold: #c5a059;
+  --color-gold-dark: #9a783e;
+  --color-charcoal: #0c0806;
+  --color-abyss: #0e1626;
+  --color-ink: #1f1b1a;
+
+  --font-classical: 'Cinzel Decorative', 'Marcellus', serif;
+  --font-body: 'Cormorant Garamond', Georgia, serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  background-color: var(--color-charcoal);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Barra Superior de Navegación
+   -------------------------------------------------------------------------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  border-bottom: 2px solid var(--color-crimson);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-gold);
+}
+
+.nav-title {
+  font-family: var(--font-classical);
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+.nav-link-main {
+  font-family: var(--font-classical);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  color: var(--color-crimson);
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid var(--color-crimson);
+  padding: 0.4rem 0.8rem;
+  background-color: #fffaf5;
+  transition: all 0.2s ease;
+}
+
+.nav-link-main:hover {
+  background-color: var(--color-crimson);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Estructura Grid y Columnas Laterales con Degradado de Fuego
+   -------------------------------------------------------------------------- */
+.shrine-wrapper {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr) 160px;
+  max-width: 1420px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+}
+
+.shrine-pillar {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top center;
+}
+
+.shrine-pillar--left {
+  background-image: url('assets/images/crimson_sky_side_fire_border_iz.png');
+}
+
+.shrine-pillar--right {
+  background-image: url('assets/images/crimson_sky_side_fire_border_de.png');
+}
+
+.shrine-content {
+  background-color: var(--color-parchment);
+  padding: 2rem 2.5rem;
+  border-left: 2px solid var(--color-crimson);
+  border-right: 2px solid var(--color-crimson);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Cabecera Hero
+   -------------------------------------------------------------------------- */
+.scrapbook-header {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.header-unified-wrap {
+  width: 100%;
+  border: 1px solid var(--color-crimson);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  background-color: #000000;
+}
+
+.header-unified-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Muestra de Portadas en Díptico
+   -------------------------------------------------------------------------- */
+.covers-showcase {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 3rem;
+}
+
+.cover-card {
+  flex: 1;
+  max-width: 420px;
+  background-color: #ffffff;
+  padding: 1rem 1rem 1.4rem 1rem;
+  border: 1px solid #d4c7b8;
+  box-shadow: 3px 4px 14px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover-card:first-child {
+  transform: rotate(-0.5deg);
+}
+
+.cover-card:last-child {
+  transform: rotate(0.5deg);
+}
+
+.cover-card .image-wrapper img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid var(--color-crimson);
+}
+
+.cover-caption {
+  display: block;
+  margin-top: 0.9rem;
+  font-family: var(--font-classical);
+  font-size: 0.8rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Presentación / Confesión Inicial
+   -------------------------------------------------------------------------- */
+.curatorial-section {
+  margin-bottom: 3.5rem;
+}
+
+.curatorial-box {
+  background-color: #fffaf5;
+  border: 1px solid var(--color-crimson);
+  border-left: 5px solid var(--color-crimson);
+  padding: 1.8rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.curatorial-heading {
+  font-family: var(--font-classical);
+  font-size: 1.15rem;
+  color: var(--color-crimson);
+  letter-spacing: 0.15rem;
+  margin-bottom: 0.8rem;
+}
+
+.curatorial-body {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #2b2b2b;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.curatorial-code {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  color: var(--color-gold-dark);
+  font-family: var(--font-classical);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Separadores de Acto (Side A vs Side B)
+   -------------------------------------------------------------------------- */
+.side-divider {
+  background: linear-gradient(90deg, #660d16, #a61c1c, #660d16);
+  padding: 0.6rem 1rem;
+  text-align: center;
+  margin: 3rem 0 2.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.side-divider--abyss {
+  background: linear-gradient(90deg, #060913, var(--color-abyss), #060913);
+  border-top: 1px solid var(--color-crimson);
+  border-bottom: 1px solid var(--color-crimson);
+}
+
+.side-label {
+  font-family: var(--font-classical);
+  color: #ffffff;
+  font-size: 0.85rem;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Entradas de Canciones y Hojas del Diario
+   -------------------------------------------------------------------------- */
+.tracks-scrapbook {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.track-entry {
+  display: flex;
+  gap: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #dcd1c4;
+  padding: 1.8rem;
+  box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.08);
+  align-items: center;
+}
+
+.track-entry:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.track-media {
+  flex: 0 0 320px;
+  max-width: 320px;
+}
+
+.track-media img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #c9bbae;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.track-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.track-num {
+  font-family: var(--font-classical);
+  font-size: 1.1rem;
+  color: var(--color-crimson);
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.track-title {
+  font-family: var(--font-classical);
+  font-size: 1.35rem;
+  color: var(--color-ink);
+  margin: 0.2rem 0 0.8rem 0;
+}
+
+.track-lyrics {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--color-crimson-dark);
+  font-style: italic;
+  border-left: 2px solid var(--color-crimson);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.entry-journal-box {
+  background-color: #f8f3ec;
+  border-left: 3px solid var(--color-gold);
+  padding: 1.1rem 1.3rem;
+  margin-top: 0.6rem;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.03);
+}
+
+.journal-tag {
+  display: block;
+  font-family: var(--font-classical);
+  font-size: 0.75rem;
+  letter-spacing: 0.12rem;
+  color: var(--color-gold-dark);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.journal-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #242424;
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Pie de Página: Libreta en Llamas
+   -------------------------------------------------------------------------- */
+.scrapbook-footer {
+  margin-top: 5rem;
+  padding: 0 0 3rem 0;
+  background-color: var(--color-charcoal);
+  border-top: 3px solid var(--color-crimson);
+  text-align: center;
+}
+
+.footer-burning-banner {
+  width: 100%;
+  margin-bottom: 2rem;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.footer-burning-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 1rem;
+}
+
+.footer-crest {
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+}
+
+.footer-title {
+  font-family: var(--font-classical);
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  color: #ffffff;
+}
+
+.footer-meta {
+  font-size: 0.85rem;
+  letter-spacing: 0.15rem;
+  color: var(--color-gold);
+  font-family: var(--font-classical);
+}
+
+.footer-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  background-color: var(--color-crimson);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-classical);
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  border: 1px solid var(--color-crimson-dark);
+  transition: all 0.2s ease;
+}
+
+.footer-btn:hover {
+  background-color: var(--color-gold);
+  color: var(--color-charcoal);
+}
+
+/* --------------------------------------------------------------------------
+   Adaptabilidad Móvil
+   -------------------------------------------------------------------------- */
+@media (max-width: 950px) {
+  .shrine-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .shrine-pillar {
+    display: none;
+  }
+
+  .shrine-content {
+    padding: 1.2rem;
+    border-left: none;
+    border-right: none;
+  }
+
+  .covers-showcase {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cover-card {
+    max-width: 100%;
+    transform: none !important;
+  }
+
+  .track-entry,
+  .track-entry:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .track-media {
+    flex: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
